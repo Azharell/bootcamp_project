@@ -8,13 +8,6 @@
 }
 
 @font-face {
-  font-family: "Coustard Regular";
-  src: url(/bootcamp_project/fonts/Coustard-Black.ttf) format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
   font-family: "OpenSans Bold";
   src: url(/fonts/OpenSans-Bold.eot) format("embedded-opentype"),
     url(/fonts/OpenSans-Bold.ttf) format("truetype"),
@@ -22,6 +15,7 @@
   font-style: normal;
   font-weight: bold;
 }
+
 @font-face {
   font-family: "Gotham Pro Bold";
   src: url(/fonts/GothamPro-Bold.eot) format("embedded-opentype"),
@@ -30,6 +24,14 @@
   font-style: normal;
   font-weight: bold;
 }
+
+@font-face {
+  font-family: "Coustard Regular";
+  src: url(/bootcamp_project/fonts/Coustard-Black.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -45,7 +47,7 @@ ul {
 }
 
 .container {
-  width: 320px;
+  min-width: 320px;
   margin: 0 auto;
 }
 
@@ -231,9 +233,9 @@ ul {
   width: 170px;
   height: 170px;
   border: 2px solid rgb(236, 214, 15);
-  margin: 20px;
   padding: 50px;
   position: relative;
+  margin: 20px;
 }
 
 .s2_list-item:hover {
@@ -439,7 +441,7 @@ div.ant-carousel-arrow-right {
 .s5 {
   display: flex;
   flex-flow: column;
-  align-items: flex-start;
+  align-items: center;
   background-color: gray;
   /* background: url(); */
   background-position: center;
@@ -562,12 +564,12 @@ footer {
     padding: 0;
   }
 
-  .nav-_list-item:first-child {
+  .nav_list-item:first-child {
     padding-right: 54px;
     position: relative;
   }
 
-  .nav-_list-item:first-child::after {
+  .nav_list-item:first-child::after {
     content: "";
     position: absolute;
     border: 1px solid #eaeaea;
@@ -635,8 +637,8 @@ footer {
   .s2_list-item {
     width: 157px;
     height: 165px;
-    margin-right: 20px;
     margin: 0;
+    margin-right: 20px;
   }
 
   .s2_list-item:last-child {
@@ -731,10 +733,12 @@ footer {
     padding: 0;
     width: 246px;
   }
+
   .s5 div,
   .s5_list {
     padding-bottom: 20px;
   }
+
   .s5_list li {
     display: flex;
     flex-flow: row;
@@ -761,30 +765,146 @@ footer {
   }
 
   .contacts li {
-    padding: 0;
+    padding: 0 25px 0 0;
   }
 
   .contacts a {
-    margin-right: 20px;
+    margin-right: 10px;
   }
 
   .contacts li:last-child p {
-    padding-left: 25px;
+    padding-left: 20px;
   }
 
   .contacts li:last-child::before {
-    left: 136px;
+    left: 130px;
     top: 1px;
   }
 
-  /* стили футера - изменений пока нет*/
   footer {
     font-size: 16px;
     font-weight: bold;
     padding: 22px 0;
   }
-
-  /* end */
 }
 
-/* table version/ */
+/* table version */
+@media (min-width: 1280px) {
+  /* header */
+  .header_nav {
+    margin: 0 60px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav_list-item a {
+    font-size: 20px;
+  }
+
+  .nav_list-item:last-child::before {
+    left: -30px;
+    top: 3px;
+  }
+
+  /* section 1 */
+  .s1 {
+    background: url(../images/s1_back-desk.png);
+    background-color: rgb(58, 53, 53);
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+
+  .s1_title {
+    font-size: 72px;
+    padding: 229px 0 24px 159px;
+    margin: 0;
+  }
+
+  .s1_list {
+    font-size: 24px;
+    padding-left: 159px;
+    padding-bottom: 98px;
+    margin: 0;
+  }
+
+  .s1_list-item {
+    padding-left: 29px;
+    padding-bottom: 14px;
+  }
+
+  .s1_list-item::before {
+    top: 10px;
+    left: 0;
+  }
+
+  /* section 2 */
+  .s2_title {
+    font-size: 44px;
+    padding-top: 78px;
+  }
+
+  .s2_list {
+    width: 768px;
+    padding-top: 44px;
+    padding-bottom: 90px;
+  }
+
+  .s2_list-item {
+    width: 178px;
+    height: 164px;
+  }
+
+  .s2_list-item::before {
+    top: -40px;
+    left: 46px;
+  }
+
+  .s2_list-item:hover::before {
+    left: 36px;
+  }
+
+  /* section 3 */
+  .s3 {
+    background: #535353 url(../images/s3_back-desktop.jpeg);
+  }
+
+  .ant-carousel-hider {
+    width: 1280px;
+  }
+
+  .ant-carousel-element {
+    width: 570px;
+    margin: 0 25px;
+    padding: 85px 0;
+  }
+
+  .ant-carousel-element img {
+    width: 570px;
+    height: 344px;
+  }
+
+  div.ant-carousel-arrow-left {
+    left: 20px;
+  }
+
+  div.ant-carousel-arrow-right {
+    right: 20px;
+  }
+
+  /* section 4 */
+  .s4_desc {
+    font-size: 34px;
+    line-height: 40px;
+    margin: 0 60px;
+    padding-left: 250px;
+    text-align: left;
+  }
+
+  .s4_desc::before {
+    font-size: 236px;
+    top: 102%;
+    left: 10%;
+  }
+}
